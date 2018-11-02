@@ -8,7 +8,7 @@
         app:wlv_borderColor="@color/colorPrimaryDarkC"
         app:wlv_borderWidth="5dp"
         app:wlv_progressValue="40"
-        app:wlv_shapeType="rectangle"
+        app:wlv_shapeType="rectangle" // circle for circular view
         app:wlv_titleCenter="Water Level"
         app:wlv_titleCenterColor="@android:color/white"
         app:wlv_titleCenterSize="50sp"
