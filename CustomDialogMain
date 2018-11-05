@@ -1,0 +1,14 @@
+public void showCustomDialog(final Context context) {
+    Dialog dialog = new Dialog(context);
+    dialog.requestWindowFeature(Window.FEATURE_NO_TITLE);
+    LayoutInflater inflater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
+    view = inflater.inflate(R.layout.your_layout, null, false);
+    findByIds(view);  /*HERE YOU CAN FIND YOU IDS AND SET TEXTS OR BUTTONS*/
+    ((Activity) context).getWindow().setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_STATE_VISIBLE | WindowManager.LayoutParams.SOFT_INPUT_ADJUST_RESIZE);
+    dialog.setContentView(view);
+    final Window window = dialog.getWindow();
+    window.setLayout(WindowManager.LayoutParams.MATCH_PARENT, WindowManager.LayoutParams.WRAP_CONTENT);
+    window.setBackgroundDrawableResource(R.color.colorTransparent);
+    window.setGravity(Gravity.CENTER);
+    dialog.show();
+}
